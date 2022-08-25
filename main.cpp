@@ -180,6 +180,7 @@ int main(int argc, char *argv[]) {
       }
 
       counter = thread_pool.GatherResults();
+      ProcessLines(std::move(string_batch), &counter);
     }
   }
 
